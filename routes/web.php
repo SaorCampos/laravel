@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SeasonsController;
 use App\Http\Controllers\SeriesController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,4 @@ Route::resource('/series', SeriesController::class)
 //     Route::get('/series/criar', 'create')->name('series.create');
 //     Route::post('/series/salvar', 'store')->name('series.store');
 // });
+Route::get('/series/{series}/seasons', [SeasonsController::class, 'index'])->name('seasons.index');

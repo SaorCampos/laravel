@@ -15,7 +15,7 @@
                 <input type="text" name="episodesPerSeason" id="episodesPerSeason" class="form-control" value="{{old('episodesPerSeason')}}">
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Adicionar</button>
-        <a href="{{route('series.index')}}" class="btn btn-secondary">Voltar</a>
+        <button type="submit" class="btn" style="background-color: #3C9BA6">Adicionar</button>
+        <a href="{{route('series.index')}}" class="btn" style="background-color: #88BABF">Voltar</a>
     </form>
 </x-layout>
