@@ -1,4 +1,4 @@
-<x-layout class="d-flex " title="Nova Série">
+<x-layout class="d-flex" title="Nova Série">
     <form action="{{route('series.store')}}" method="post">
         @csrf {{-- valida as informações enviadas pelo formulario --}}
         <div class="mb-3">

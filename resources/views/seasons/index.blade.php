@@ -1,4 +1,4 @@
-<x-layout title="Séries">
+<x-layout title="Temporadas de {!! $series->nome !!}">
     <a href="{{route('series.index')}}" class="btn mb-2" style="background-color: #88BABF">Voltar</a>
     <ul class="list-group">
         @foreach($seasons as $season)

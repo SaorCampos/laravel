@@ -24,5 +24,6 @@ Route::resource('/series', SeriesController::class)
 //     Route::get('/series', 'index')->name('series.index');
 //     Route::get('/series/criar', 'create')->name('series.create');
 //     Route::post('/series/salvar', 'store')->name('series.store');
+//     Route::put('/series/editar', 'update')->name('series.update');
 // });
 Route::get('/series/{series}/seasons', [SeasonsController::class, 'index'])->name('seasons.index');
