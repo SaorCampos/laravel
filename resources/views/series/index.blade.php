@@ -12,12 +12,18 @@
                     {{$serie->nome}}
                 </a>
             <span class="d-flex">
-                <a href="{{route('series.edit',$serie->id)}}" class="btn btn-warning btn-sm">E</a>
+                <a href="{{route('series.edit',$serie->id)}}" class="btn btn-warning btn-sm">
+                    <span class="material-symbols-outlined">
+                    edit
+                    </span>
+                </a>
                 <form action="{{route('series.destroy', $serie->id)}}" method="POST" class="ms-1">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger btn-sm">
-                        X
+                        <span class="material-symbols-outlined">
+                            delete
+                            </span>
                     </button>
                 </form>
             </span>

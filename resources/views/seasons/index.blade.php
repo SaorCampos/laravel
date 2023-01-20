@@ -3,7 +3,7 @@
     <ul class="list-group">
         @foreach($seasons as $season)
             <li class="list-group-item d-flex justify-content-between align-items-center">
-                Temporada {{$season->number}}
+                <a href="{{route('episodes.index', $season->id)}}" class="text-reset text-decoration-none">Temporada {{$season->number}}</a> 
                 <span class="badge" style="background-color: #3C9BA6">
                     {{ $season->episodes->count() }}
                 </span>

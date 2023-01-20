@@ -8,23 +8,7 @@ use Illuminate\Support\ServiceProvider;
 
 class SeriesRepositoryProvider extends ServiceProvider
 {
-    /**
-     * Register services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        $this->app->bind(InterfaceSeriesRepository::class, SeriesRepository::class);
-    }
-
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        //
-    }
+    public array $bindings = [
+        InterfaceSeriesRepository::class => SeriesRepository::class
+    ];
 }

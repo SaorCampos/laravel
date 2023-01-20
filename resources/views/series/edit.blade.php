@@ -10,7 +10,7 @@
         </div>
         <div class="mb-3 col-6">
             <label for="seasonQty" class="form-label">Nº de Temporadas</label>
-            <input type="text" name="seasonQty" id="seasonQty" class="form-control" value="{{$series->number}}">
+            <input type="text" name="seasonQty" id="seasonQty" class="form-control" value="{{$season->number}}">
         </div>
         <div class="mb-3 col-6">
             <label for="episodesPerSeason" class="form-label">Episodios por Temporada</label>
