@@ -6,7 +6,8 @@ use App\Http\Interface\InterfaceSeriesRepository;
 use App\Models\Series;
 use Illuminate\Http\Request;
 use App\Http\Requests\SeriesFormRequest;
-
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Support\Facades\Auth;
 
 class SeriesController extends Controller
 {
@@ -14,6 +15,7 @@ class SeriesController extends Controller
     {
         
     }
+
     public function index(Request $request)
     {
         // $series = Serie::query()->orderBy('nome')->get();
