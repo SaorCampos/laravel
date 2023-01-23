@@ -20,8 +20,9 @@ use App\Http\Controllers\UsersController;
 */
 
 Route::get('/',function(){
-    return redirect('/login');
-})->middleware(Autenticador::class);
+    return to_route('login.index');
+});
+
 Route::resource('/series', SeriesController::class)
 ->except(['show']);
 // Route::controller(SeriesController::class)->group(function (){
@@ -37,6 +38,8 @@ Route::post('/seasons/{season}/episodes', [EpisodesController::class, 'update'])
 
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');
 Route::post('/login', [LoginController::class, 'store'])->name('signin');
+Route::get('/logout', [LoginController::class, 'destroy'])->name('logout');
+
 
 Route::get('/register', [UsersController::class, 'create'])->name('users.create');
 Route::post('/register', [UsersController::class, 'store'])->name('users.store');

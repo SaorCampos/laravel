@@ -11,6 +11,17 @@
     <title>{{$title}} - Controle de Séries</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="{{ route('series.index') }}" class="navbar-brand">Series</a>
+            @auth
+            <a href="{{ route('logout') }}" class="btn" style="background-color: #88BABF">Sair</a>
+            @endauth
+            @guest
+                <a href="{{ route('login.index') }}" class="btn" style="background-color: #3C9BA6">Logar</a>
+            @endguest
+        </div>
+    </nav>
     <div class="container">
         <h1 style="color: #161614">{{$title}}</h1>
         @isset($mensagemSucesso) 

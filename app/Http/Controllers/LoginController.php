@@ -11,10 +11,16 @@ class LoginController extends Controller
     {
         return view('login.index');
     }
-    public function login(Request $request)
+    public function store(Request $request)
     {
-        if(!Auth::attempt($request->all())){
+        if(!Auth::attempt($request->only(['email', 'password']))){
             return redirect()->back()->withErrors(['Usuários ou senha invalidos']);
         }
+        return to_route('series.index');
+    }
+    public function destroy()
+    {
+        Auth::logout();
+        return to_route('login.index');
     }
 }

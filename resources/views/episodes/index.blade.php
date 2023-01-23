@@ -12,7 +12,9 @@
         @endforeach
     </ul>
     <div class="col mt-3">
+        @auth
         <button class="btn" style="background-color: #3C9BA6">Salvar</button>
+        @endauth
         <a href="{{route('series.index')}}" class="btn" style="background-color: #88BABF">Voltar</a>
     </div>
 </form>

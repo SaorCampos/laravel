@@ -1,5 +1,5 @@
 <x-layout class="d-flex" title="Login">
-    <form action="post" class="mb-3">
+    <form method="POST" class="mb-3">
         @csrf
         <div class="mb-3">
             <div class="mb-3 col-4">
