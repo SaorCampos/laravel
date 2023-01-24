@@ -11,7 +11,7 @@
                 <input type="text" name="seasonQty" id="seasonQty" class="form-control" value="{{old('seasonQty')}}">
             </div>
             <div class="mb-3 col-6">
-                <label for="episodesPerSeason" class="form-label">Episiodios por Temporada</label>
+                <label for="episodesPerSeason" class="form-label">Episodios por Temporada</label>
                 <input type="text" name="episodesPerSeason" id="episodesPerSeason" class="form-control" value="{{old('episodesPerSeason')}}">
             </div>
         </div>

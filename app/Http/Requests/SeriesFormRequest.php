@@ -30,8 +30,10 @@ class SeriesFormRequest extends FormRequest
     public function messages()
     {
         return [
-            'nome.required' => 'O campo nome é obrigatório',
-            'nome.min' => 'O campo nome precisa ter pelo menos :min caracteres'
+            'nome.required' => 'O campo Nome é obrigatório',
+            'nome.min' => 'O campo nome precisa ter pelo menos :min caracteres',
+            'seasonQty.required' => 'O campo Nº de Temporadas é obrigatório',
+            'episodesPerSeason.required' => 'O campo Episodios por Temporada é obrigatorio'
         ];
     }
 }
